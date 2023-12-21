@@ -6,8 +6,8 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     opts = {
-      suggestion = { enabled = false },
-      panel = { enabled = false },
+      suggestion = { auto_trigger = true },
+      panel = { enabled = true, size = 10, max_height = 10 },
     },
   },
 
@@ -24,6 +24,16 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot" }, { name = "emoji" } }))
+    end,
+  },
+  -- plugins/rest.lua
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = { { "nvim-lua/plenary.nvim" } },
+    config = function()
+      require("rest-nvim").setup({
+        --- https://github.com/rest-nvim/rest.nvim
+      })
     end,
   },
 }

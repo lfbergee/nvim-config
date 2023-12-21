@@ -8,6 +8,8 @@ return {
         "bash",
         "dockerfile",
         "yaml",
+        "http",
+        "json",
       },
     },
   },

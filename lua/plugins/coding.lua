@@ -36,4 +36,8 @@ return {
       })
     end,
   },
+  -- Rainbow Highlighting
+  {
+    "HiPhish/nvim-ts-rainbow2",
+  },
 }
